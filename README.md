@@ -1,73 +1,110 @@
-# Welcome to your Lovable project
 
-## Project info
+# UBS GIC Recruitment
 
-**URL**: https://lovable.dev/projects/82358c99-5bba-433d-87f8-252af963af37
+A web application for UBS Global Investment Center's recruitment process that allows users to generate job specifications from templates and create interview questions based on job specs and CVs.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- Job specification generation from templates
+- Upload of existing job specifications
+- Resume/CV upload
+- Interview question generation based on job specs and CVs
+- UBS-styled UI components
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/82358c99-5bba-433d-87f8-252af963af37) and start prompting.
+### Frontend
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- Webpack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- FastAPI (Python)
+- Azure OpenAI API integration
 
-**Use your preferred IDE**
+## Project Structure
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+```
+├── src/
+│   ├── components/         # React components
+│   ├── pages/              # Page components
+│   ├── lib/                # Utility functions
+│   └── hooks/              # Custom React hooks
+├── backend/                # FastAPI backend
+└── public/                 # Static assets
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+### Frontend
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Install dependencies:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+```bash
+npm install
+```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Start the development server:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Backend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. Navigate to the backend directory:
 
-**Use GitHub Codespaces**
+```bash
+cd backend
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. Create a virtual environment:
 
-## What technologies are used for this project?
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-This project is built with:
+3. Install dependencies:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```bash
+pip install -r requirements.txt
+```
 
-## How can I deploy this project?
+4. Set environment variables:
 
-Simply open [Lovable](https://lovable.dev/projects/82358c99-5bba-433d-87f8-252af963af37) and click on Share -> Publish.
+```bash
+export AZURE_OPENAI_API_KEY=your_key_here
+export AZURE_OPENAI_ENDPOINT=your_endpoint_here
+export AZURE_OPENAI_DEPLOYMENT=your_deployment_here
+export AZURE_OPENAI_API_VERSION=2023-05-15
+```
 
-## Can I connect a custom domain to my Lovable project?
+5. Start the backend server:
 
-Yes, you can!
+```bash
+python main.py
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## API Endpoints
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- `GET /templates` - Get job templates
+- `POST /job-spec/generate` - Generate a job specification
+- `POST /job-spec/upload` - Upload an existing job specification
+- `POST /interview-questions/generate` - Generate interview questions
+- `POST /interview-questions/upload-cv` - Upload a CV
+
+## Deployment
+
+The application can be deployed to any environment that supports:
+1. Node.js (for the React frontend)
+2. Python (for the FastAPI backend)
+3. Access to Azure OpenAI services
+
+## License
+
+This project is proprietary and confidential. Unauthorized copying, transferring, or reproduction of the contents of this project is strictly prohibited.
+
+© 2025 UBS Global Investment Center. All rights reserved.
