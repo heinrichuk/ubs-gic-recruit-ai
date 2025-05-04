@@ -5,9 +5,9 @@ const UBSLogo: React.FC = () => {
   return (
     <div className="flex items-center">
       <img 
-        src="/lovable-uploads/6d5f7bbd-d2f6-4edd-a5ea-2c8d0ee123ab.png" 
+        src="/lovable-uploads/003cc959-3835-47df-83ea-d4749431a889.png" 
         alt="UBS Logo" 
-        className="h-8 md:h-10"
+        className="h-8 md:h-12"
       />
     </div>
   );
