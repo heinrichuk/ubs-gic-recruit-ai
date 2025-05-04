@@ -1,6 +1,7 @@
 
 import React, { ReactNode } from 'react';
 import Header from './Header';
+import UBSLogo from './UBSLogo';
 import { Toaster } from "@/components/ui/toaster";
 
 interface LayoutProps {
